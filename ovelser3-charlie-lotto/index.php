@@ -78,7 +78,7 @@ echo "<hr>";
 $antal_rigtige = 0;
 foreach ($udtrukne_vindertal as &$value) {
   if (in_array($value,$mine_valgte_tal)) {
-    echo "<h2>$value er et vinderal. <br></h2>";
+    echo "<strong>$value er et vinderal. </strong><br>";
     $antal_rigtige++;
   } else {echo "$value er ikke et vinderal. <br>";}
 }
