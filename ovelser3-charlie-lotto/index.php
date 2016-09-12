@@ -57,26 +57,25 @@ og vis, hvor mange rigtige du havde
 */
 
 // András løsningsforslag LOTTO
-// 1) Lav et array med de 7 valgte tal
-// 2) Lav 7 variabler med 7 tilfældige tal
-// 3) brug in_array() funktion 7 gange, for at se, om det 
+// 1) Laver et array med de 7 valgte tal
+// 2) Laver 7 variabler med 7 tilfældige tal (eller array)
+// 3) Bruger in_array() funktion 7 gange, for at se, om det 
 //    valgte tal er iblandt de udtrukne
-// 4) Hver gang, der er match, skriv "Du har gættet X rigtigt!" 
+// 4) Hver gange, der er match, skriver "Du har gættet X rigtigt!" 
 
-echo "<hr>";
-$mine_valgte_tal = array(3, 6, 12, 24, 15, 33, 21);
-$udtrukne_vindertal = array();
-for ($i=0; $i<7; $i++) {
-  
-  $nyt_tal = rand(1,35);
-  while (!in_array($nyt_tal, $udtrukne_vindertal)) {
-      $udtrukne_vindertal[]=$nyt_tal;
+echo "<hr>"; // Viser en linje med HR tag
+$mine_valgte_tal = array(3, 6, 12, 24, 15, 33, 21); // Laver et array med mine lottotal
+$udtrukne_vindertal = array(); // Laver et tømt array
+for ($i=0; $i<7; $i++) { // En løkke "trækker" 7 vindertal
+  $nyt_tal = rand(1,35); // Finder et tilfældigt tal mellem 1 og 35
+  while (!in_array($nyt_tal, $udtrukne_vindertal)) { // Finder på nye vindertal, og undgår at samme tal trækkes flere gange
+      $udtrukne_vindertal[]=$nyt_tal; // Tilføjer det udtrukne tal som sidste element i arrayet
   }
 }
-print_r($udtrukne_vindertal);
-echo "<hr>";
+print_r($udtrukne_vindertal); // Bruges til DEBUG: Viser arrayet med de udtrukne tal 
+echo "<hr>"; // Viser en linje med HR tag
 $antal_rigtige = 0;
-foreach ($udtrukne_vindertal as &$value) {
+foreach ($udtrukne_vindertal as &$value) { // Tjekker, hvor mange rigtige er der
   if (in_array($value,$mine_valgte_tal)) {
     echo "<strong>$value er et vinderal. </strong><br>";
     $antal_rigtige++;
