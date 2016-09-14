@@ -64,29 +64,54 @@ og vis, hvor mange rigtige du havde
 // 4) Hver gange, der er match, skriver "Du har gættet X rigtigt!" 
 
 echo "<hr>"; // Viser en linje med HR tag
+
 $mine_valgte_tal = array(3, 6, 12, 24, 15, 33, 21); // Laver et array med mine lottotal
+
 $udtrukne_vindertal = array(); // Laver et tømt array
-for ($i=0; $i<=7; $i++) { // En løkke "trækker" 7 vindertal
-  $nyt_tal = rand(1,35); // Finder et tilfældigt tal mellem 1 og 35
-  while (!in_array($nyt_tal, $udtrukne_vindertal)) { // Finder på nye vindertal, og undgår at samme tal trækkes flere gange
-      $udtrukne_vindertal[]=$nyt_tal; // Tilføjer det udtrukne tal som sidste element i arrayet
+
+// Se mere på http://www.w3schools.com/php/func_array_count.asp
+while (count($udtrukne_vindertal)<7) { // Finder på nye vindertal, og undgår at samme tal trækkes flere gange
+      
+      $nyt_tal = rand(1,35);
+      
+      if (!in_array($nyt_tal, $udtrukne_vindertal)) { // Se mere påhttp://www.w3schools.com/php/func_array_in_array.asp
+      
+        $udtrukne_vindertal[]=$nyt_tal; // Tilføjer det udtrukne tal som sidste element i arrayet
+      
+      }
   }
-}
+
 print_r($udtrukne_vindertal); // Bruges til DEBUG: Viser arrayet med de udtrukne tal 
+
 echo "<hr>"; // Viser en linje med HR tag
+
 $antal_rigtige = 0;
+
 foreach ($udtrukne_vindertal as &$value) { // Tjekker, hvor mange rigtige er der
+  
   if (in_array($value,$mine_valgte_tal)) {
+  
     echo "<strong>$value er et vinderal. </strong><br>";
+  
     $antal_rigtige++;
-  } else {echo "$value er ikke et vinderal. <br>";}
+  
+  } else { echo "$value er ikke et vinderal. <br>"; }
+
 }
+
 echo "<hr>";
+
 echo "Du har fået " . $antal_rigtige . " rigtige.<br>";
+
 $gevinster = array (0, 0, 50, 200, 2000, 50000, 200000);
+
 echo "<i>";
-echo "Vinderprognose: med " . $antal_rigtige . " rigtige vil du få ca. 
-$gevinster[$antal_rigtige] kroner udbetalt. "; // Hov der er fejl her!!!!
+
+if ($gevinster[$antal_rigtige]) {
+  echo "Vinderprognose: med " . $antal_rigtige . " rigtige vil du få ca. 
+$gevinster[$antal_rigtige] kroner udbetalt. "; 
+}
+
 echo "</i>";
 
 
