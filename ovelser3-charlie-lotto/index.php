@@ -66,7 +66,7 @@ og vis, hvor mange rigtige du havde
 echo "<hr>"; // Viser en linje med HR tag
 $mine_valgte_tal = array(3, 6, 12, 24, 15, 33, 21); // Laver et array med mine lottotal
 $udtrukne_vindertal = array(); // Laver et tømt array
-for ($i=0; $i<7; $i++) { // En løkke "trækker" 7 vindertal
+for ($i=0; $i<=7; $i++) { // En løkke "trækker" 7 vindertal
   $nyt_tal = rand(1,35); // Finder et tilfældigt tal mellem 1 og 35
   while (!in_array($nyt_tal, $udtrukne_vindertal)) { // Finder på nye vindertal, og undgår at samme tal trækkes flere gange
       $udtrukne_vindertal[]=$nyt_tal; // Tilføjer det udtrukne tal som sidste element i arrayet
@@ -85,7 +85,8 @@ echo "<hr>";
 echo "Du har fået " . $antal_rigtige . " rigtige.<br>";
 $gevinster = array (0, 0, 50, 200, 2000, 50000, 200000);
 echo "<i>";
-echo "Vinderprognose: med " . $antal_rigtige . " rigtige vil du få ca. $gevinster[$antal_rigtige] kroner udbetalt. ";
+echo "Vinderprognose: med " . $antal_rigtige . " rigtige vil du få ca. 
+$gevinster[$antal_rigtige] kroner udbetalt. "; // Hov der er fejl her!!!!
 echo "</i>";
 
 

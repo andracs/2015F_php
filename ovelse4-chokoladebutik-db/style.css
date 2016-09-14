@@ -1,0 +1,147 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+html{
+	font-size:100%; /* 1em = 1rem = 12pt = 16px = 100% */
+					/* While em is relative to 
+					the font-size of its direct 
+					or nearest parent, rem is relative to 
+					the font-size of html    */
+	}
+
+body{
+	/*background-color:#333;*/
+	}
+
+#wrapper{
+	max-width:960px; /*  prøv med 90%  */
+	margin:0 auto;
+	padding: 10px; /* px => %*/
+	/*background-color:#666;*/
+	}	
+
+#wrapper header img{
+	width:100%;
+	background-color:#fff;
+}
+
+nav {
+	width:100%;
+	}
+
+nav .button{
+	width: 16.66%;
+	float:left;
+	background-color:#603913;
+	}
+
+nav a.button {
+	font-size: 166.66%; /*  20pt => 20*12/100=166.66%  */
+						/*         ønsket pt *   */
+	text-align:center;
+	color:#FFF;
+	text-decoration:none;
+	}
+
+nav a.button:hover {
+	color:#f6e9b0;
+}
+
+
+#maincontent{
+	width:100%;
+	display:table;
+	background-color:#fff;
+	position:relative;
+	}
+	
+#forside_billed{
+	width:50%;
+	float:left;
+	display:table-cell;
+	}
+
+#maincontent #forside_billed img{
+	width:100%;
+}
+
+#forside_tekst{
+	width:46%;
+	float:left;
+	display:table-cell;
+	padding:2%;
+/*	background-color:#C99;*/
+	position:relative;
+	margin-top:10%;
+}
+
+#forside_tekst header{
+	
+	}
+
+#forside_tekst header h1{
+	font-size:400%;
+	
+	}
+
+#forside_tekst p{
+	font-size:117%;
+	}
+
+#se_flere_tilbud {
+	display:block;
+	padding:10px;
+	width:150px;
+	background:#e61359;
+	border-radius: 10px;
+	}	
+	
+#se_flere_tilbud a{
+	color:#fff;
+	text-align:center;
+	text-decoration:none;
+	}
+		
+#se_flere_tilbud a:hover{
+	color:#603913;
+	}	
+
+#wrapper section{
+	width:100%;
+	display:table;
+	}
+	
+#wrapper section article{
+/*	background-color:#9F3;*/
+	display:table-cell;
+	max-width:25%;
+	padding:10px;
+	}
+
+#wrapper section article img{
+	width:100%;
+	}
+
+#wrapper section article p{
+	
+	}
+
+
+#wrapper section article a{
+	color:#ed145b;
+	text-decoration:none;
+	}
+
+#wrapper section article a:hover{
+	color:#000;
+	}
+
+footer{
+	background:#603913;
+	}
+	
+footer p{
+	color:#fff;
+	text-align:center;
+	}
