@@ -4,6 +4,37 @@
   // Database eksempel
   echo "<h1>Database eksempel</h1>";
   
+  // Konkatinering
+  
+  $variable = "ost";
+  $et_array = array ("underbolle", "overbolle", "smør");
+  $skiver_af_agurker = 3;
+  
+  // Nu laver jeg min sandwich
+  echo "<hr>";
+  echo $et_array[0];
+  echo " ";
+  echo $et_array[2];
+  echo " ";
+  echo $variable;
+  echo " ";
+  echo "'syltetøj' ";
+  echo  $skiver_af_agurker;
+  echo " ";
+  echo "agurker";
+  echo " ";
+  echo $et_array[1];
+  echo "<hr>";
+  
+ // Nu konkatinerer jeg min sandwich
+ echo "<hr>" . $et_array[0] . " " . $et_array[2] . " " . $variable . " " . $skiver_af_agurker . " "  . "agurker" . " " . $et_array[1]."<hr>";
+
+/*
+echo '<img src="images/' ;
+echo  $row["news_img"];
+echo '" alt="">';
+*/  
+  
   /*******************   Etablerer forbindelse  til DB **********************/
   $servername = "localhost";
   $username = "root";
