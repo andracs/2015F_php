@@ -6,6 +6,7 @@ $database = "choko";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $database);
+$conn -> set_charset("UTF8");
 
 echo "<!-- ";
 // Check connection
@@ -20,7 +21,7 @@ echo " -->";
 
  <nav>
    <?php
-   $sql = "SELECT menu_id, menu_item, menu_href FROM choko_menu";
+   $sql = "SELECT menu_id, menu_item, menu_href FROM t_menu";
    $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) {
