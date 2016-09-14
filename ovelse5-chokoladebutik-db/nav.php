@@ -6,7 +6,7 @@ $database = "choko";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $database);
-$conn -> set_charset("UTF8");
+$conn -> set_charset("UTF8"); 
 
 echo "<!-- ";
 // Check connection
@@ -29,7 +29,6 @@ if (mysqli_num_rows($result) > 0) {
     while($row = mysqli_fetch_assoc($result)) {
         //echo "id: " . $row["id"]. " - Name: " . $row["firstname"]. " " . $row["lastname"]. "<br>";
         echo '<a class="button" href="'.$row["menu_href"].'">' . $row["menu_item"] . '</a>';
-
     }
 } else {
     echo "0 results";
