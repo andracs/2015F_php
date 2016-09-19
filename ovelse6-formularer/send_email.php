@@ -29,8 +29,10 @@ $er_det_afsendt = mail("anac@easj.dk","Ny begivenhed indtastet", $msg, $headers)
 if($er_det_afsendt) echo "<br />Du har nu indsendt et arrengement til AOLF.DK, mail er afsendt.";
 
 /* Lex Lonnie - der er forskel mellem enkel- og dobbelt-anførselstegn, når man bruger echo */
+echo "<hr>";
 $planet = "Venus";
 echo "$planet"; // Viser Venus, dvs. variablets VÆRDI
+echo " | ";
 echo '$planet'; // Viser $planet, dvs. variablets NAVN
 
 
