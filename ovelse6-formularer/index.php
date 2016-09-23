@@ -2,13 +2,18 @@
 <html>
 <head>
 <title>Opret en begivenhed på Alt om Lolland Falster</title>
+  <link href="../css/typebase.css" rel="stylesheet">
+
 </head>
 <body>
 
-<!-- Her er et eksempel, som viser forskellige input types i forms -->
-<form action="send_email.php" method="get">
-  <h1>Opret en begivenhed på Alt om Lolland Falster</h1><br />
+  <!-- Et eksempel, som viser forskellige input types i forms -->
+  <h1>Opret en begivenhed på Alt om Lolland Falster</h1>
+  <p> Her er et eksempel på en HTML formular, som det kunne se ud på sitet Alt om Lolland Falster. Se også <a href="insert.php">insert.php</a>, hvor du kan se et eksempel på at data gemmes i database fra formularen.<br /><br /></p>
 
+  <!-- Denne linje er vigtig!  Formularen sendes til send_email.php med GET metode. Vil POST være bedre? -->
+  <form action="send_email.php" method="get">
+  
   <fieldset>
     <legend>Om begivenheden:</legend>
     Begivenhedens navn: <input type="text" name="begivenheds_navn"><br /> Beskriv begivenheden maks 10 linjer:<br />
@@ -25,7 +30,6 @@
     Dit navn: <input type="text" name="usremail"><br /> Dit telefonnummer: <input type="tel" name="usremail"><br />
   </fieldset>
   <input id="indsend" type="submit" value="Opret begivenhed">
-
 
 </form>
 

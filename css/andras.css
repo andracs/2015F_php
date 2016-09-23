@@ -1,0 +1,157 @@
+ body {
+        background: #4CA1AF; /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #4CA1AF , #C4E0E5); /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #4CA1AF , #C4E0E5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        color: rgba(250, 250, 250, 0.9);
+        font-family: 'Open Sans', sans-serif;
+        margin: 0 5%; 
+        font-size:1rem;    
+      }
+      p {
+      font-size:1rem;
+      }
+    a:hover, a:active, a:link, a:visited {
+        color: rgba(250, 250, 250, 0.95);
+        text-decoration:none;
+        font-weight: bolder;
+         text-shadow: 0px 15px 5px rgba(0,0,0,0.1),
+                 10px 20px 5px rgba(0,0,0,0.05),
+                 -10px 20px 5px rgba(0,0,0,0.05);
+    }
+    
+    a:hover {
+        text-decoration:underline;
+        text-shadow: 0px 15px 5px rgba(0,0,0,0.1),
+                 10px 20px 5px rgba(0,0,0,0.05),
+                 -10px 20px 5px rgba(0,0,0,0.05);
+    
+    }
+
+    h1 {
+        font-weight:bolder;
+        font-size:4rem;
+    }
+    h2 {
+      font-weight:normal;
+      font-size:2.5rem;
+   }
+
+    h1 a:active, 
+    h1 a:visited,
+    h1 a:hover,
+    h1 a:link{
+        color: rgba(250, 250, 250, 1);
+    }    
+    
+    ul { font-size:4.5vw;
+     /*
+     text-shadow: 0px 15px 5px rgba(0,0,0,0.1),
+                 10px 20px 5px rgba(0,0,0,0.05),
+                 -10px 20px 5px rgba(0,0,0,0.05);
+                 */
+    }
+    
+    li { padding: 3vw;}
+
+    .rainbow:hover {
+        -webkit-animation:rainbow 1s infinite;
+        -ms-animation:rainbow 1s infinite;
+        -o-animation:rainbow 1s infinite;
+        animation:rainbow 1s infinite;
+        }
+        @-webkit-keyframes rainbow {
+        0% {color: #C200FB;}
+        10% {color: #EC0868;}
+        20% {color: #FC2F00;}
+        30% {color: #FFBC0A;}
+        40% {color: #FF5487;}
+        50% {color: #00ff80;}
+        60% {color: #00ffff;}
+        70% {color: #0080ff;}
+        80% {color: #0000ff;}
+        90% {color: #8000ff;}
+        100% {color: #ff0080;}
+        }
+        @-ms-keyframes rainbow {
+        0% {color: #ff0000;}
+        10% {color: #ff8000;}
+        20% {color: #ffff00;}
+        30% {color: #80ff00;}
+        40% {color: #00ff00;}
+        50% {color: #00ff80;}
+        60% {color: #00ffff;}
+        70% {color: #0080ff;}
+        80% {color: #0000ff;}
+        90% {color: #8000ff;}
+        100% {color: #ff0080;}
+        }
+        @-o-keyframes rainbow {
+        0% {color: #ff0000;}
+        10% {color: #ff8000;}
+        20% {color: #ffff00;}
+        30% {color: #80ff00;}
+        40% {color: #00ff00;}
+        50% {color: #00ff80;}
+        60% {color: #00ffff;}
+        70% {color: #0080ff;}
+        80% {color: #0000ff;}
+        90% {color: #8000ff;}
+        100% {color: #ff0080;}
+        }
+        @keyframes rainbow {
+        0% {color: #ff0000;}
+        10% {color: #ff8000;}
+        20% {color: #ffff00;}
+        30% {color: #80ff00;}
+        40% {color: #00ff00;}
+        50% {color: #00ff80;}
+        60% {color: #00ffff;}
+        70% {color: #0080ff;}
+        80% {color: #0000ff;}
+        90% {color: #8000ff;}
+        100% {color: #ff0080;}
+    }
+
+ul {
+  list-style-type: none;
+  margin: 3vh 0 0 0;
+  padding: 0;
+}
+
+li {
+  border-bottom: 1px solid #ccc;
+}
+
+li:last-child {
+  border: none;
+}
+
+li a {
+  text-decoration: none;
+  color: rgba(250, 250, 250, 1);
+  
+  -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -moz-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -o-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -ms-transition: font-size 0.3s ease, background-color 0.3s ease;
+  transition: font-size 0.3s ease, background-color 0.3s ease;
+
+}
+
+li a:hover {
+  /* background: #f6f6f6; */
+}
+
+ul ul li {
+    font-size: 2rem;
+}
+
+.small {font-size:1rem;}
+
+footer {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  padding: 1rem;
+  text-align: right;
+}

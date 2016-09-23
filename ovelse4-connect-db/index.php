@@ -42,9 +42,9 @@
   $conn->close();
   
   /*******************   Lidt om konkatinering **********************/ 
-  echo "<h2>Konkatinering </h2>";
+  echo "<h2>Konkatenering </h2>";
 
-  // Lidt om konkatinering (spurgt i klassen)
+  // Lidt om konkatenering (spurgt i klassen)
   
   $variable = "ost";
   $et_array = array ("underbolle", "overbolle", "smør");

@@ -5,9 +5,9 @@
 2) Vi kodede frontend (formen) i HTML (kunne også bruge CSS og JS)
 3-4) Vi sendte data fra formen med hhv. POST og GET til webserveren
 5-6) Vi skrev en "form handling code" i PHP, som hhv. viste det indsendte data på skærmen og sendte den som en e-mail
-7) DENNE NÅEDE VI IKKE ENDNU: Dataen skal gemmes i databasen. 
+7)  Dataen skal gemmes i databasen --> Se i insert.php
 
-TUTORIALS, DU KAN FØLGE: 
+TUTORIALS, DU BØR GENNEMFØRE: 
 HTML FORMS - http://www.w3schools.com/html/html_forms.asp
 PHP FORMS - http://www.w3schools.com/php/php_forms.asp 
 PHP MAIL - http://www.w3schools.com/php/func_mail_mail.asp
