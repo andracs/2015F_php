@@ -67,7 +67,8 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
-        //echo "Code: " . $row["Code"]. " - Name: " . $row["Name"]. " Population: " . $row["Population"]. "<br>";
+        // DEBUG echo "Code: " . $row["Code"]. " - Name: " . $row["Name"]. " Population: " . $row["Population"]. "<br>";
+        // Vi skal vise date i denne format:    [1.0, {label: 'Dog'}],
         echo "    [" . ($row["Population"] /1000000) . ", {label: '" .  $row["Name"] . "'}],"; 
     }
 } else {
